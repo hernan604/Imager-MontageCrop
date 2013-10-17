@@ -8,22 +8,22 @@ our $VERSION = '0.01';
 sub gen_page {
     my $self = shift;
     my $args = shift;
- 
+
     $args->{geometry_w} ||= $args->{resize_w};
     $args->{geometry_h} ||= $args->{resize_h};
- 
+
     $args->{$_} ||= 0
         for(qw/border frame margin_v margin_h/);
- 
+
     $args->{$_}         ||= '#ffffff'
         for (qw/background_color border_color frame_color/);
- 
+
     $args->{page_width}
         ||= $args->{frame} * 2
         + ( $args->{border} * 2 ) * $args->{cols}
         + $args->{geometry_w} * $args->{cols}
         + ( $args->{margin_h} * 2 ) * $args->{cols};
- 
+
     $args->{page_height}
         ||= $args->{frame} * 2
         + ( $args->{border} * 2 ) * $args->{rows}
@@ -131,6 +131,7 @@ sub gen_page {
 
 
 1;
+
 __END__
 
 =encoding utf-8
@@ -145,7 +146,8 @@ Imager::MontageCrop - Modified version of Imager::Montage
   use Path::Class;
 
   my $img   = Imager::MontageCrop->new();
-  my $imgs = [
+
+  my $imgs  = [
     "t/images/a.png" ,
     "t/images/b.png" ,
     "t/images/c.png" ,
@@ -157,25 +159,29 @@ Imager::MontageCrop - Modified version of Imager::Montage
     "t/images/i.png" ,
     "t/images/j.png" ,
   ];
+
   my $page  = $img->gen_page(
       {
-          files       => $imgs,
-          crop_h      => 130,
-          crop_w      => 140,
-          resize_w    => 180,
-          margin_v    => 10,
-          margin_h    => 10,
-          geometry_w  => 130,
-          geometry_h  => 120,
-          cols        => 5,
-          rows        => 2,
-          page_width  => 900,
-          page_height => 400,
-          background_color => "#FFF",
+          files             => $imgs,
+          crop_h            => 130,
+          crop_w            => 140,
+          resize_w          => 180,
+          margin_v          => 10,
+          margin_h          => 10,
+          geometry_w        => 130,
+          geometry_h        => 120,
+          cols              => 5,
+          rows              => 2,
+          page_width        => 900,
+          page_height       => 400,
+          background_color  => "#FFF",
       }
   );
 
-  $page->write( file => 'montage.png' , type => 'png'  ); 
+  $page->write(
+    file => 'montage.png' , 
+    type => 'png'  
+  ); 
 
 =head1 DESCRIPTION
 

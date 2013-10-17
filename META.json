@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "Modified version of Imager::Montage",
    "author" : [
       "Hernan Lopes <hernan@cpan.org>"
    ],
@@ -46,6 +46,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/hernan604/Imager-MontageCrop/issues"
+      },
+      "homepage" : "https://github.com/hernan604/Imager-MontageCrop",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/hernan604/Imager-MontageCrop.git",
+         "web" : "https://github.com/hernan604/Imager-MontageCrop"
+      }
+   },
    "version" : "0.01"
 }
 
