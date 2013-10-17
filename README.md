@@ -51,6 +51,10 @@ Imager::MontageCrop is a modified version of Imager::Montage. This version allow
 
 If the author of Imager::Montage is interested, this modification could be pushed into his code.
 
+# DOCUMENTATION
+
+See: [Imager::Montage](http://search.cpan.org/perldoc?Imager::Montage)
+
 # AUTHOR
 
 Hernan Lopes <hernan@cpan.org>
