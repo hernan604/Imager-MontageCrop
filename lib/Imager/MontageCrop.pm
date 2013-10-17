@@ -189,6 +189,10 @@ Imager::MontageCrop is a modified version of Imager::Montage. This version allow
 
 If the author of Imager::Montage is interested, this modification could be pushed into his code.
 
+=head1 DOCUMENTATION
+
+See: L<Imager::Montage>
+
 =head1 AUTHOR
 
 Hernan Lopes E<lt>hernan@cpan.orgE<gt>
